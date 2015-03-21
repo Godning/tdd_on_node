@@ -14,13 +14,13 @@ Soldier = function (name, aggresivity, life) {
 };
 Soldier.prototype = Object.create(NormalPerson.prototype);
 Soldier.prototype.constructor = Soldier;
-Soldier.prototype.set_weapon = function(weapon) {
+Soldier.prototype.set_weapon = function (weapon) {
     this.weapon = weapon;
 };
 Soldier.prototype.set_armor = function (armor) {
     this.armor = armor;
 };
-Soldier.prototype.attack_action = function(){
+Soldier.prototype.attack_action = function () {
     return this.weapon.use() + '攻击了'
 };
 Soldier.prototype.get_damage_value = function () {

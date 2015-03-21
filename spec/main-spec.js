@@ -1,4 +1,3 @@
-
 var assert = require("assert");
 
 require('../src/normal_person.js');
