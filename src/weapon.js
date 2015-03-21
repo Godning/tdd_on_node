@@ -10,9 +10,9 @@ NullWeapon.prototype.use = function(){
     return '';
 };
 
-Weapon = function (name, aggresivity){
+Weapon = function (name, aggressivity){
     this.name = name;
-    this.aggressivity = aggresivity;
+    this.aggressivity = aggressivity;
 };
 Weapon.prototype.use = function(){
     return '用' + this.name;

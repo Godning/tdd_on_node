@@ -17,7 +17,6 @@ describe('Test of models', function () {
         var expectText = '普通人李四攻击了普通人张三,张三受到了10点伤害,张三剩余生命:10';
         var result = monster_b.attack(monster_a);
 
-        // expect(result).toBe(expectText);
         assert.equal(result, expectText);
     });
 
@@ -28,7 +27,6 @@ describe('Test of models', function () {
         var expectText = '普通人李四攻击了战士张三,张三受到了10点伤害,张三剩余生命:10';
         var result = monster_a.attack(solider_b);
 
-        //expect(result).toBe(expectText);
         assert.equal(result, expectText);
     });
 
@@ -40,7 +38,6 @@ describe('Test of models', function () {
         var expectText = '普通人李四攻击了战士张三,张三受到了5点伤害,张三剩余生命:15';
         var result = monster_a.attack(solider_b);
 
-        //expect(result).toBe(expectText);
         assert.equal(result, expectText);
     });
 
@@ -63,7 +60,6 @@ describe('Test of models', function () {
         var expectText = '战士李四用优质木棒攻击了普通人张三,张三受到了15点伤害,张三剩余生命:5';
         var result = soldier_b.attack(monster_a);
 
-        //expect(result).toBe(expectText);
         assert.equal(result, expectText);
     });
 
@@ -75,7 +71,6 @@ describe('Test of models', function () {
         var expectText = '战士李四用优质木棒攻击了战士张三,张三受到了15点伤害,张三剩余生命:5';
         var result = soldier_b.attack(soldier_a);
 
-        //expect(result).toBe(expectText);
         assert.equal(result, expectText);
     });
 
@@ -88,7 +83,6 @@ describe('Test of models', function () {
         var expectText = '战士李四用优质木棒攻击了战士张三,张三受到了10点伤害,张三剩余生命:10';
         var result = soldier_b.attack(soldier_a);
 
-        //expect(result).toBe(expectText);
         assert.equal(result, expectText);
     });
 
@@ -99,7 +93,6 @@ describe('Test of models', function () {
         var expectText = '战士李四攻击了战士张三,张三受到了10点伤害,张三剩余生命:10';
         var result = soldier_b.attack(soldier_a);
 
-        //expect(result).toBe(expectText);
         assert.equal(result, expectText);
     });
 
@@ -111,7 +104,6 @@ describe('Test of models', function () {
         var expectText = '战士李四攻击了战士张三,张三受到了5点伤害,张三剩余生命:15';
         var result = soldier_b.attack(soldier_a);
 
-        //expect(result).toBe(expectText);
         assert.equal(result, expectText);
     });
 });
