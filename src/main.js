@@ -1,6 +1,7 @@
 //TODO: Please write code in this file.
 
-function fighting(x, y, l) {
+
+fighting = function (x, y, l) {
     var flag = true;
     while (x.is_alive() && y.is_alive()) {
         if (flag) {
