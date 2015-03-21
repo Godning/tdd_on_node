@@ -26,12 +26,7 @@ Soldier.prototype.attack_action = function(){
 Soldier.prototype.get_damage_value = function () {
     return this.weapon.aggressivity + this.aggressivity;
 };
-Soldier.prototype.be_attacked = function (another) {
-    var hurt = another.get_damage_value() - this.armor.defense;
-    this.life -= hurt;
-    if(this.life < 0){
-        this.life = 0;
-    }
-    return this.name + '受到了' + hurt + '点伤害,' + this.name + '剩余生命:' + this.life;
+Soldier.prototype.get_hurt = function (aggressivity) {
+    return aggressivity - this.armor.defense;
 };
 
