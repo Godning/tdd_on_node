@@ -2,7 +2,7 @@
  * Created by hackeris on 3/21/2015.
  */
 
-require('./monster.js');
+require('./normal_person.js');
 require('./weapon.js');
 require('./armor.js');
 

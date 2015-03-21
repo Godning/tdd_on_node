@@ -1,7 +1,7 @@
 
 var assert = require("assert");
 
-require('../src/monster.js');
+require('../src/normal_person.js');
 require('../src/soldier.js');
 require('../src/weapon.js');
 require('../src/armor.js');
