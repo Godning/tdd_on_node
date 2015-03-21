@@ -25,13 +25,10 @@ Soldier.prototype.attack = function (another) {
         + another.role + another.name + ',' + another.be_attacked(this);
 };
 Soldier.prototype.get_damage_value = function () {
-    if(this.weapon){
-        return this.weapon.aggressivity + this.aggressivity;
-    }
-    return this.aggressivity;
+    return this.weapon.aggressivity + this.aggressivity;
 };
 Soldier.prototype.be_attacked = function (another) {
-    var hurt = this.armor ? another.get_damage_value() - this.armor.defense : another.get_damage_value();
+    var hurt = another.get_damage_value() - this.armor.defense;
     this.life -=hurt;
     if(this.life < 0){
         this.life = 0;
