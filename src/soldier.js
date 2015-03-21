@@ -20,16 +20,15 @@ Soldier.prototype.set_weapon = function(weapon) {
 Soldier.prototype.set_armor = function (armor) {
     this.armor = armor;
 };
-Soldier.prototype.attack = function (another) {
-    return this.role + this.name + this.weapon.use() + '攻击了'
-        + another.role + another.name + ',' + another.be_attacked(this);
+Soldier.prototype.attack_action = function(){
+    return this.weapon.use() + '攻击了'
 };
 Soldier.prototype.get_damage_value = function () {
     return this.weapon.aggressivity + this.aggressivity;
 };
 Soldier.prototype.be_attacked = function (another) {
     var hurt = another.get_damage_value() - this.armor.defense;
-    this.life -=hurt;
+    this.life -= hurt;
     if(this.life < 0){
         this.life = 0;
     }

@@ -12,7 +12,10 @@ NormalPerson.prototype.get_damage_value = function () {
     return this.aggressivity;
 };
 NormalPerson.prototype.attack = function (another) {
-    return this.role + this.name + '攻击了' + another.role + another.name + ',' + another.be_attacked(this);
+    return this.role + this.name + this.attack_action() + another.role + another.name + ',' + another.be_attacked(this);
+};
+NormalPerson.prototype.attack_action = function(){
+    return '攻击了';
 };
 NormalPerson.prototype.is_alive = function () {
     return this.life > 0;
