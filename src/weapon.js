@@ -17,3 +17,4 @@ Weapon = function (name, aggressivity) {
 Weapon.prototype.use = function () {
     return '用' + this.name;
 };
+

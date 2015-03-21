@@ -98,5 +98,14 @@ describe('TDD', function () {
 
         assert.equal(log_result.join(), expectText.join());
     });
+
+    it('Soldier 李四 with poison sword fight with NormalPerson 张三, output every action', function () {
+        var soldier_a = new Soldier('张三', 5, 40);
+        var person_b = new NormalPerson('李四', 5, 40);
+        soldier_a.set_weapon(new Weapon('优质毒剑', 2));
+
+        var expectResult = ['战士张三用优质毒剑攻击了普通人李四,李四受到了15点伤害,李四中毒了,李四剩余生命:25',
+            '普通人李四受到2点毒性伤害,李四剩余生命:23','普通人李四攻击了战士张三,张三受到了5点伤害,张三剩余生命:15'];
+    });
 });
 
